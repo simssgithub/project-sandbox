@@ -1,13 +1,12 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Testimony from './projects/Testimony';
+import Alertapp from './projects/05-AlertApp/Alertapp';
 function App() {
 
   return (
     <div className="App">
-    
-    <Testimony/>
+      <Alertapp/>
     </div>
   );
 }
