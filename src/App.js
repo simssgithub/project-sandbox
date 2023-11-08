@@ -1,12 +1,12 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Alertapp from './projects/05-AlertApp/Alertapp';
+import TemperatureControllerApp from './projects/06-TemperatureCtr/TemperatureControllerApp';
 function App() {
 
   return (
     <div className="App">
-      <Alertapp/>
+      <TemperatureControllerApp/>
     </div>
   );
 }
