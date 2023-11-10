@@ -1,38 +1,33 @@
 import React from "react";
 
-export default function SliderComp({ setValue, handleInput, bgColor, textColor }) {
+export default function SliderComp({ 
+  setValue, 
+  handleInput, 
+  bgColor, 
+  textColor 
+}) {
+
+  const sliderStyle = {
+    appearance: "none",
+    width:"100%",
+    height:25,
+background: "lightgray",
+  };
   return (
-    // <div className="container d-flex flex-column" style={{ gap: 100 }}>
-    //   <input type="range" min="0" max={100} style={{ cursor: "pointer" }} />
-    //   <div
-    //   style={{
-    //     color:"black",
-    //     background: "lightgray",
-    //     height: `30px`,
-    //     width:`30px`,
-    //     fontWeight: 600,
-    //     display:"flex",
-    //     justifyContent:"center",
-    //     alignItems: "center",
-    //     borderRadius:"50%",
-    //   }}
-    //   >
-    //     <span>circle</span>
-    //   </div>
-    // </div>
-    <div className="container d-flex flex-column justify-content-center align-items-center" style={{ gap: 100 }}>
-    <input type="range" min="0" 
+    <div className="container d-flex flex-column justify-content-center align-items-center" 
+    style={{ gap: 100 }}>
+    <input type="range" 
+    min="0"  
     max={100} 
     value={setValue}
     onInput={handleInput}
-    style={{ cursor: "pointer" 
-    }} />
+    style={sliderStyle} />
     <div
         style={{
             color:!textColor ? "black" : textColor,
             background: !bgColor ? "lightgray" : bgColor,
-            height: `30px`,
-            width:`30px`,
+            height: `${setValue * 3}px`,
+            width:`${setValue * 3}px`,
             fontWeight: 600,
             display:"flex",
             justifyContent:"center",
@@ -40,9 +35,9 @@ export default function SliderComp({ setValue, handleInput, bgColor, textColor }
             borderRadius:"50%",
         }}
     >
-        <span>circle</span>
+        <span>{setValue}</span>
     </div>
 </div>
-
+  
   );
 }
