@@ -1,13 +1,12 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import SliderApp from "./projects/09-sliderApp/SliderApp";
 
-import './App.css';
-import SlideToUnlockApp from './projects/08-Slide-to-Unlock/SlideToUnlockApp';
 function App() {
-
   return (
     <div className="App">
-     <SlideToUnlockApp/>
+      <SliderApp />
     </div>
   );
 }
